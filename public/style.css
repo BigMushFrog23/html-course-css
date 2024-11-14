@@ -1,0 +1,257 @@
+:root {
+    --primary-color: #2e2320;
+    --secondary-color: #a6994d;
+    --accent-color: #b08b40;
+    --background-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --border-color: #4a3d35;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    border: solid var(--border-color) 4px;
+    background-color: #200101;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    padding: 10px 0;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#menu-container {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    align-items: center;
+    position: relative;
+}
+
+#menu-container #menu {
+    background: var(--secondary-color);
+    list-style-type: none;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#menu-container #logo_bonfire {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    margin-top: -50px;
+    transition: transform 0.3s;
+}
+
+#menu-container #logo_bonfire:hover {
+    transform: scale(1.1);
+}
+
+#menu-container #menu .menu-item {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+#menu-container #menu .menu-item:hover li {
+    color: var(--accent-color);
+}
+
+#menu-container #menu .menu-item li {
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+.footer-container {
+    height: 80px;
+    background-color: #200101;
+    border-top: solid var(--border-color) 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content-container {
+    border: solid var(--border-color) 3px;
+    background-color: #13120e;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.image-container {
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classes {
+    height: 350px;
+    width: auto;
+    border: solid var(--border-color) 3px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 600px;
+}
+
+.description {
+    border: solid var(--border-color) 2px;
+    padding: 20px;
+    background-color: #101010;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.weapons-header {
+    background-color: #101010;
+    color: var(--accent-color);
+    border: solid var(--border-color) 2px;
+    padding: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.weapons-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+.weapons-list li {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.weapons-list li:hover {
+    background-color: var(--accent-color);
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.featured-title {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px; /* Reduced the margin between the title and the profiles */
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.featured-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.runners-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Slightly reduced the gap between profile boxes */
+    margin-top: 20px; /* Reduced the margin-top to decrease the space from the title */
+    flex-wrap: wrap;
+}
+
+.runner-profile {
+    background-color: #2e2320;
+    border: solid var(--border-color) 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease, box-sha
+
+}
+
+.runner-profile:hover {
+    transform: translateY(-15px); /* Lift it more on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.runner-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: solid var(--border-color) 2px;
+}
+
+.runner-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.runner-name {
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.runner-specialty {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.runner-profile:hover .runner-name {
+    color: var(--secondary-color);
+}
+
+.runner-profile:hover .runner-specialty {
+    color: var(--accent-color);
+}
